@@ -11,3 +11,9 @@ class DeckTest(unittest.TestCase):
 
     def test_should_have_4_distinct_suits(self):
         self.assertEqual(4, len(set([card.suit for card in self.deck.cards])))
+
+    def test_shuffle(self):
+        first_card = self.deck.cards[0]
+        self.deck.shuffle()
+        first_card_shuffled = self.deck.cards[0]
+        self.assertNotEqual(first_card, first_card_shuffled)
