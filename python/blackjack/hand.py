@@ -7,24 +7,16 @@ class Hand():
         return self.score == other.score
 
     def __gt__(self, other):
-        if self.score > other.score :
-            return True
-        return False
+        return self.score > other.score
 
     def __lt__(self, other):
-        if self.score < other.score :
-            return True
-        return False
+        return self.score < other.score
 
     def __le__(self, other):
-        if self.score <= other.score:
-            return True
-        return False
+        return self.score <= other.score
 
     def __ge__(self, other):
-        if self.score >= other.score:
-            return True
-        return False
+        return self.score >= other.score
 
     @property
     def score(self):

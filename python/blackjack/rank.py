@@ -14,8 +14,7 @@ class Rank():
             return "Q"
         if self.rank == 13:
             return "K"
-        else:
-            return str(self.rank)
+        return str(self.rank)
 
     def initial_value(self):
         if self.rank == 1:

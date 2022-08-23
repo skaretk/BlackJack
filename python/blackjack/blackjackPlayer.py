@@ -9,6 +9,4 @@ class BlackjackPlayer:
 
     @property
     def bust(self):
-        if self.hand.score > 21:
-            return True
-        return False
+        return self.hand.score > 21

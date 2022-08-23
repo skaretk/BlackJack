@@ -12,6 +12,4 @@ class Dealer(BlackjackPlayer):
 
     @property
     def allow_hit(self):
-        if self.hand.score < 17:
-            return True
-        return False
+        return self.hand.score < 17

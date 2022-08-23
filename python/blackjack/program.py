@@ -22,12 +22,9 @@ def main():
 
         elif read.lower() == 'Stand'.lower():
             if not dealer.bust and not player.bust:
-                while True:
-                    if dealer.hand <= player.hand and dealer.allow_hit:
-                        card = deck.cards.pop()
-                        dealer.hit(card)
-                    else:
-                        break
+                while dealer.hand <= player.hand and dealer.allow_hit:
+                    card = deck.cards.pop()
+                    dealer.hit(card)
 
                 if dealer.bust:
                     print(f'You Won! Dealer busted! You ({player.hand.score}) Dealer ({dealer.hand.score})')
